@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Remesas Click a Cuba: Tu Puente Seguro desde Brasil a Cuba. ¿Necesitas enviar dinero a tus seres queridos en Cuba desde Curitiba, Brasil? ¡En Remesas Click a Cuba, te lo hacemos fácil, rápido y seguro!">
+
+    <title>Remesas Click a Cuba - Remesas a Cuba desde Brasil</title>
+    <style>
+        /* Estilos básicos mejorados */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            width: 90%; /* Ajuste para móviles */
+            max-width: 800px;
+            margin: 20px auto; /* Menos margen superior */
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #0056b3;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        h2 {
+            color: #0069d9;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 5px;
+            margin-top: 25px; /* Espacio antes de cada sección */
+            margin-bottom: 15px; /* Espacio después de cada título de sección */
+        }
+        p, li {
+            text-align: justify;
+            margin-bottom: 10px;
+        }
+        ul, ol {
+            padding-left: 30px; /* Más indentación para listas */
+        }
+        li {
+            margin-bottom: 12px; /* Más espacio entre ítems */
+        }
+        strong {
+            color: #0056b3; /* Resaltar texto importante */
+        }
+        hr {
+            border: 0;
+            height: 1px;
+            background-color: #ddd; /* Línea separadora más suave */
+            margin: 30px 0; /* Espacio alrededor de la línea */
+        }
+
+        /* Estilos para la sección "Cómo Funciona" */
+        .como-funciona li::before {
+            content: "➡️"; /* Icono de flecha */
+            margin-right: 8px;
+            color: #0069d9;
+        }
+         .como-funciona li {
+            list-style: none; /* Quitar numeración por defecto */
+            padding-left: 0; /* Ajustar padding */
+        }
+         .como-funciona li strong { /* Resaltar paso clave */
+            font-weight: bold;
+         }
+
+
+        /* Estilos para la sección "Servicios" */
+         .servicios li::before {
+             margin-right: 8px;
+             font-size: 1.1em; /* Hacer icono un poco más grande */
+         }
+         .servicios li.cup::before { content: "💰"; } /* Icono CUP */
+         .servicios li.usd::before { content: "💵"; } /* Icono USD */
+         .servicios li.saldo::before { content: "📱"; } /* Icono Saldo */
+         .servicios li { list-style: none; padding-left: 0; }
+         .servicios .detalle-usd { /* Estilo para el detalle del USD */
+            font-size: 0.9em;
+            color: #555;
+            margin-left: 25px; /* Indentar el detalle */
+            display: block; /* Mostrar en nueva línea */
+         }
+
+        /* Estilos para la nota de tasas */
+        .nota-tasas {
+            background-color: #e7f3fe; /* Fondo azul claro */
+            border-left: 4px solid #0069d9; /* Borde izquierdo azul */
+            padding: 10px 15px;
+            margin-top: 20px;
+            font-size: 0.95em;
+            text-align: center;
+        }
+        .nota-tasas::before {
+            content: "📊 ";
+            font-size: 1.1em;
+        }
+
+        /* Estilos para la Llamada a la Acción (CTA) */
+        .cta {
+            text-align: center;
+            margin: 30px 0;
+            padding: 15px;
+            background-color: #f0f8ff;
+            border-radius: 5px;
+        }
+        .cta p {
+            font-size: 1.1em;
+            font-weight: bold;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        .cta .links a { /* Hereda estilos de .links a, pero podemos hacerlos más grandes */
+            padding: 12px 20px;
+            font-size: 1.1em;
+        }
+
+
+        /* Estilos para los enlaces de contacto */
+        .links {
+            text-align: center;
+            margin-top: 15px;
+        }
+        .links a {
+            display: inline-block;
+            margin: 8px 10px;
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 18px; /* Botones un poco más grandes */
+            border: 1px solid #007bff;
+            border-radius: 20px; /* Bordes más redondeados */
+            transition: background-color 0.3s, color 0.3s;
+            font-size: 0.95em; /* Ajustar tamaño de fuente si es necesario */
+        }
+        .links a:hover {
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+        }
+        /* Iconos básicos para enlaces (puedes mejorar con Font Awesome si quieres) */
+         .links a.whatsapp::before { content: "💬 "; }
+         .links a.instagram::before { content: "📸 "; }
+         .links a.facebook::before { content: "👍 "; }
+
+        /* Estilos específicos para botones de redes sociales */
+        .links a.whatsapp { border-color: #25D366; color: #25D366; }
+        .links a.whatsapp:hover { background-color: #25D366; color: #fff; }
+        .links a.instagram { border-color: #C13584; color: #C13584; }
+        .links a.instagram:hover { background-color: #C13584; color: #fff; }
+        .links a.facebook { border-color: #1877F2; color: #1877F2; }
+        .links a.facebook:hover { background-color: #1877F2; color: #fff; }
+
+        /* Estilos para el Footer */
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+            font-size: 0.85em;
+            color: #777;
+        }
+        footer p {
+            text-align: center; /* Asegurar centrado en footer */
+            margin-bottom: 5px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Remesas Click a Cuba</h1>
+
+        <p>
+            <strong>Nuestra Misión:</strong><br>
+            Ser el puente de confianza que conecta corazones y familias, facilitando el envío de ayuda económica desde Brasil hacia Cuba de manera eficiente y segura.
+        </p>
+        <p>
+            <strong>¿Por qué elegir Remesas Click a Cuba?</strong>
+            <ul>
+                <li><strong>Seguridad Garantizada:</strong> Tu tranquilidad es nuestra prioridad. Implementamos los más altos estándares de seguridad para que tu dinero llegue a su destino sin preocupaciones.</li>
+                <li><strong>Rapidez Eficiente:</strong> Entendemos la urgencia. Nos esforzamos por procesar tus envíos de manera ágil para que tus familiares en Cuba reciban la ayuda lo antes posible.</li>
+                <li><strong>Conexión Directa:</strong> Desde Curitiba, Brasil, te ofrecemos una vía directa y confiable para apoyar a tus seres queridos en Cuba.</li>
+                <li><strong>Fácil de Usar:</strong> Nuestra plataforma está diseñada para ser intuitiva y sencilla, permitiéndote realizar tus envíos con unos pocos clics.</li>
+                <li><strong>Atención Personalizada:</strong> Estamos aquí para ayudarte en cada paso del proceso. Nuestro equipo está listo para responder tus preguntas y brindarte el mejor servicio.</li>
+            </ul>
+        </p>
+
+        <hr>
+
+        <h2>¿Cómo Enviar tu Remesa?</h2>
+        <ol class="como-funciona">
+            <li><strong>Contáctanos vía WhatsApp:</strong> Usa los botones de abajo para iniciar la conversación.</li>
+            <li><strong>Indica los Detalles:</strong> Dinos qué tipo de remesa necesitas (CUP, USD Cash, Saldo) y los datos del beneficiario en Cuba.</li>
+            <li><strong>Realiza el Pago:</strong> Te indicaremos cómo realizar el pago de forma segura a través de <strong>PIX</strong>.</li>
+            <li><strong>Confirmación y Envío:</strong> Una vez recibido el pago, confirmamos y procesamos tu remesa rápidamente. ¡Te mantenemos informado!</li>
+        </ol>
+
+        <hr>
+
+        <h2>Nuestros Servicios de Remesa</h2>
+        <ul class="servicios">
+            <li class="cup">
+                <strong>Envío de Reales (BRL) a Pesos Cubanos (CUP)</strong><br>
+                🕒 Tiempo de entrega estimado: <strong>5 a 15 minutos</strong> después de la confirmación del pago.
+            </li>
+            <li class="usd">
+                <strong>Envío de Reales (BRL) a USD en Efectivo (Solo en La Habana)</strong><br>
+                🕒 Tiempo de entrega: Variable.
+                <span class="detalle-usd">📍 La entrega depende del municipio en La Habana. En algunos hay entrega a domicilio, en otros se coordina la recogida cerca del Estadio Latinoamericano (Cerro). <strong>Consulta los detalles al contactarnos.</strong></span>
+            </li>
+            <li class="saldo">
+                <strong>Recarga de Saldo Móvil Cubacel desde Reales (BRL)</strong><br>
+                🕒 Tiempo de entrega: Generalmente en <strong>pocos minutos</strong>.
+            </li>
+        </ul>
+
+        <div class="nota-tasas">
+            Para conocer la <strong>tasa de cambio actualizada</strong> y nuestras competitivas comisiones, por favor contáctanos directamente por WhatsApp. ¡Te ofreceremos la mejor cotización posible!
+        </div>
+
+        <hr>
+
+        <div class="cta">
+            <p>¿Listo para ayudar a tu familia en Cuba?</p>
+            <div class="links">
+                 <a href="https://bit.ly/4ioBBjB" target="_blank" rel="noopener noreferrer" class="whatsapp">Contactar por WhatsApp</a>
+                 <a href="https://chat.whatsapp.com/BoLTmTcv3tPEneyJP3j45J" target="_blank" rel="noopener noreferrer" class="whatsapp">Unirse al Grupo WhatsApp</a>
+            </div>
+        </div>
+
+        <hr>
+
+        <h2>Síguenos y Contáctanos</h2>
+        <p style="text-align: center;">Puedes contactarnos directamente o seguirnos en nuestras redes para novedades:</p>
+        <div class="links">
+            <a href="https://bit.ly/4ioBBjB" target="_blank" rel="noopener noreferrer" class="whatsapp">WhatsApp Personal</a>
+            <a href="https://chat.whatsapp.com/BoLTmTcv3tPEneyJP3j45J" target="_blank" rel="noopener noreferrer" class="whatsapp">Grupo WhatsApp</a>
+            <a href="https://www.instagram.com/remesas_click_a_cuba?igsh=MTlhczJvNmttY2J2eQ==" target="_blank" rel="noopener noreferrer" class="instagram">Instagram</a>
+            <a href="https://www.facebook.com/profile.php?id=61574033253490" target="_blank" rel="noopener noreferrer" class="facebook">Facebook</a>
+        </div>
+
+    </div> <footer>
+        <p>© 2025 Remesas Click a Cuba - Remesas a Cuba desde Curitiba, Brasil.</p>
+        <p>Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
